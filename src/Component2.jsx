@@ -14,7 +14,10 @@ const Component2 = () => {
 };
 
 function isRender(prev, next) {
-    return false
+   if(prev?.secondValue !== next?.secondValue) {
+      return false
+   }
+   return true
 }
 
 export default React.memo(Component2, isRender);
